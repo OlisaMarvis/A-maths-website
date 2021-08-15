@@ -1,0 +1,198 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+#container{
+    width: 90%;
+   /* border: 1px solid gray; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+#header{
+    /* height: 100px; */
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+#Brand{
+    /* float: left; */
+    flex: 50%;
+}
+h1 a{
+    font-size: 45px;
+    font-weight: 100;
+    color: #861BBF;
+    text-decoration: none;
+}
+#searchBox{
+    /* float: right; */
+    flex: 50%;
+    background: linear-gradient(#EAF289, #B7E953);
+    background: -webkit-linear-gradient(#EAF289, #B7E953);
+    background: -o-linear-gradient(#EAF289, #B7E953);
+    background: -moz-linear-gradient(#EAF289, #B7E953);
+    min-width: 350px;
+    /* height: 50px; */
+    padding: 20px 10px 20px 0px;
+    /* margin-top: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    float: left;
+    width: 180px;
+    padding: 3px;
+    font-size: 15px;
+    color: #E36A0C;
+    background: white url(Images/search.png) right center no-repeat;
+    border: 1px solid #c8D03E;
+}
+.submit{
+    float: right;
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+    background: #A751D6;
+    font-size: 15px;
+}
+.clear{
+    clear: both;
+}
+#menu{
+    /* height: 70px;  */
+    background: -webkit- linear-gradient(#F8F594, #D5D533);
+    background: -o- linear-gradient(#F8F594, #D5D533);
+    background: -moz- linear-gradient(#F8F594, #D5D533);
+    background:linear-gradient(#F8F594, #D5D533);
+    animation-iteration-count: infinite;
+    animation-name: colorchange;
+    animation-duration: 3s;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+@keyframes colorchange{
+    0%{background:linear-gradient(#F8F594, #D5D533);}
+    33.33%{background: #A751D6;}
+    66.66%{background: white;}
+}
+#menu a{
+    /* float: left; */
+    padding: 0 30px;
+    height: 30px;
+    border-right: 1px solid;
+    /* color: #5d12e7; */
+}
+#menu a:last-child{
+    border-right: none;
+}
+#menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    color: #5d12e7;
+    line-height: 30px;
+    -moz-transition: font-size 0.3s ease;
+    -webkit-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+    transition: font-size 0.3s ease;
+}
+#menu a:hover, #menu a.active{
+    font-size: 20px;
+    font-weight: bold;
+    color: #B314DB;
+}
+/* small screen targeting: verical menu (CSS media query)*/
+@media screen and (max-width: 700px){
+     #menu{
+        flex-direction: column;
+        align-content: center;
+    }
+    #menu a{
+        border-right: none;
+    }
+}
+#introduction{
+    background: linear-gradient(#E5F2BB, #B7E952);
+    background: -webkit-linear-gradient(#E5F2BB, #B7E952);
+    background: -o- linear-gradient(#E5F2BB, #B7E952);
+    background: -moz- linear-gradient(#E5F2BB, #B7E952);
+    padding: 30px;
+    margin: 16px 0;
+}
+#introduction h3{
+    font-size: 45px;
+    font-weight: normal;
+    color: #316901;
+}
+#introduction p{
+    font-size: 25px;
+    color: #628F19;
+    text-align: justify;
+}
+.sidebars{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sidebarWrapper{
+    padding: 5px;
+    flex: 50%;
+}
+.sidebar{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #BAF46F;
+    border-radius: 20px;
+    padding: 10px 30px;
+    /* flex: 50%; */
+}
+.sidebar h3{
+    color: #B314DB;
+    font-size: 30px;
+}
+.sidebar ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #5d12e7;
+}
+.sidebar ul{
+    padding-top: 8px;
+}
+#left-sidebar ul li{
+    padding: 3.5px 0 6px 10px;
+    list-style-image: url(Images/arrow.png);
+}
+#right-sidebar ul li{
+    padding: 6px 0 10px 10px;
+    list-style-image: url(Images/tick.png);
+}
+.sidebar ul li a:hover, .sidebar ul li a.active{
+    text-decoration: none;
+    color: #B314DB;
+    font-size: 23px;
+    font-weight: bold;
+    -moz-transition: font-size 0.3s ease;
+    -webkit-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+    transition: font-size 0.3s ease;
+}
+/* #left-sidebar{
+    float: left;
+}
+#right-sidebar{
+    float: right;
+} */
+.footer{
+    height: 60px;
+    background: linear-gradient(#F6F390, #d5d533);
+    padding: 10px 30px;
+    margin-top: auto;
+    text-align: center;
+}
